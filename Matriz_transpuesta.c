@@ -3,51 +3,54 @@
 #include <time.h>
 
 int main() {
-    int tamano;
+    int filas, columnas;
 
-    printf("Ingrese el tamano de la matriz: ");
-    scanf("%d", &tamano);
+    printf("Ingrese el numero de filas de la matriz: ");
+    scanf("%d", &filas);
 
-    int matriz[tamano][tamano];
+    printf("Ingrese el numero de columnas de la matriz: ");
+    scanf("%d", &columnas);
 
-    //Generar numeros aleatorios entre 0 y 100
+    int matriz[filas][columnas];
 
+    // Generar numeros aleatorios entre 0 y 100
     srand(time(NULL));
 
-    //LLenar la mtriz con numeros aleatorios
-     for (int i = 0; i < tamaño; i++) {
-        for (int j = 0; j < tamaño; j++) {
-            matriz[i][j] = rand() % 101; // Generar número aleatorio entre 0 y 100
+    // Llenar la matriz con numeros aleatorios
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            matriz[i][j] = rand() % 101; // Generar numero aleatorio entre 0 y 100
         }
     }
 
-    //Imprimir la matriz original
-     printf("Matriz original:\n");
-    for (int i = 0; i < tamano; i++) {
-        for (int j = 0; j < tamano; j++) {
+    // Imprimir la matriz original
+    printf("Matriz original:\n");
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
             printf("%d ", matriz[i][j]);
         }
         printf("\n");
     }
 
-    //calcular la matriz transpuesta 
-int transpuesta[tamano][tamano];
-    for (int i = 0; i < tamano; i++) {
-        for (int j = 0; j < tamano; j++) {
+    // Calcular la matriz transpuesta
+    int transpuesta[columnas][filas];
+    for (int i = 0; i < columnas; i++) {
+        for (int j = 0; j < filas; j++) {
             transpuesta[i][j] = matriz[j][i];
-         }
-     }
+        }
+    }
 
-     // imprimir matriz transpuesta 
-
-      printf("Matriz transpuesta:\n");
-    for (int i = 0; i < tamano; i++) {
-        for (int j = 0; j < tamano; j++) {
+    // Imprimir la matriz transpuesta
+    printf("Matriz transpuesta:\n");
+    for (int i = 0; i < columnas; i++) {
+        for (int j = 0; j < filas; j++) {
             printf("%d ", transpuesta[i][j]);
         }
         printf("\n");
     }
 
-return 0;
+    return 0;
 }
-// en el commit final se arreglo el nombre de las variables por que escribi tamaño en ves de tamano como estaba en la variable, se agrego el calculo de la mtriz transpuesta y el calculo de la matriz transpuesta 
+
+//Ahora si es el commit final el programa anterior no cuenta, 
+// lo que paso es que me imprimia una matriz cuadrada jejeje:)
