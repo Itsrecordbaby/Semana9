@@ -21,6 +21,18 @@ int main() {
         }
     }
 
+    //Imprimir la matriz original
+     printf("Matriz original:\n");
+    for (int i = 0; i < tamaño; i++) {
+        for (int j = 0; j < tamaño; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    //imrprimir la matriz transpuesta 
+
+
     
     
 
